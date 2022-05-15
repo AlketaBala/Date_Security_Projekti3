@@ -27,4 +27,5 @@ namespace Base64EncoderDecoder
                 block = (length + padding) / 3;
             }
             length2 = length + padding;
-        }
+       
+            
