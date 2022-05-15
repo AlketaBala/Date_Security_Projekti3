@@ -33,6 +33,7 @@ namespace Base64EncoderDecoder
 
             block6b = length / 4;
             length2 = block6b * 3;
+            
         }
          public byte[] Decode()
         {
@@ -43,3 +44,40 @@ namespace Base64EncoderDecoder
             {
                 block[i] = chartoblock(ciphertext[i]);
             }
+             byte b, b1, b2, b3;
+            byte j1, j2, j3, j4;
+
+            for (int i = 0; i < block6b; i++)
+            {
+                j1 = block[i * 4];
+                j2 = block[i * 4 + 1];
+                j3 = block[i * 4 + 2];
+                j4 = block[i * 4 + 3];
+
+                b = (byte)(j1 << 2);
+                b1 = (byte)((j2 & 48) >> 4);
+                b1 += b;
+
+                b = (byte)((j2 & 15) << 4);
+                b2 = (byte)((j3 & 60) >> 2);
+                b2 += b;
+
+                b = (byte)((j3 & 3) << 6);
+                b3 = j4;
+                b3 += b;
+
+                block2[i * 3] = b1;
+                block2[i * 3 + 1] = b2;
+                block2[i * 3 + 2] = b3;
+            }
+
+            length3 = length2 - padding;
+            byte[] plaintext = new byte[length3];
+
+            for (int i = 0; i < length3; i++)
+            {
+                plaintext[i] = block2[i];
+            }
+
+            return plaintext;
+        }
