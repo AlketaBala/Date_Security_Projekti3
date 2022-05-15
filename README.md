@@ -1,9 +1,9 @@
 # Date_Security_Projekti3
-Projekti ne lenden : Siguria e të Dhënave
+Projekti në lëndën : Siguria e të Dhënave
 Përmbajtja e Projektit
-Implementimi i Base64 enkoderit dhe dekoderit. Gjuha e perdorur gjate implementimit eshte C# (.NET Framework).
+Implementimi i Base64 enkoderit dhe dekoderit. Gjuha e përdorur gjatë implementimit është C# (.NET Framework).
 
-Ky projekt eshte zhvilluar nga studentet e vitit te dyte FIEK, drejtimi Inxhinieri Kompjuterike
+Ky projekt është zhvilluar nga studentët e vitit të dytë FIEK, drejtimi Inxhinieri Kompjuterike
 
 Alketa Bala
 Abin Demukaj
